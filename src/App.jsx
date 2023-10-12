@@ -1,7 +1,7 @@
 import { useState, useCallback, useEffect, useRef } from 'react'
 import './App.css'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRedo } from '@fortawesome/free-solid-svg-icons'
+import { faRedo, faLock, faXmarksLines } from '@fortawesome/free-solid-svg-icons'
 
 function App() {
   const [length, setLength] = useState(8)
@@ -72,6 +72,12 @@ function App() {
 
   return (
     <div className='w-full max-w-md mx-auto shadow-md rounded-lg px-4 py-3 my-8 bg-white text-neutral-800'>
+      <div className='text-center mt-5'>
+        <FontAwesomeIcon icon={faLock} size='2xl' style={{color: "#2ccec3"}} />
+      </div>
+      <div className='text-center mt-2 mb-5'>
+        <FontAwesomeIcon icon={faXmarksLines} size="xl" style={{color: "#2ccec3"}} />
+      </div>
       <h1 className='text-neutral-800 text-center my-1'>PASSWORD GENERATOR</h1>
       <p className='text-neutral-600 text-center my-5 text-sm'>Create a strong and secure passwords to keep your account safe online.</p>
       <div className='flex shadow rounded-lg overflow-hidden'>
